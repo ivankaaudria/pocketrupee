@@ -542,8 +542,8 @@ a:hover {
 
 .PocketRupee-footer-bottom p {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.882);
-  margin: 0;
+  color: rgba(255, 255, 255, 0.734);
+  margin-top: -10px;
   max-width: fit-content;
 }
 
