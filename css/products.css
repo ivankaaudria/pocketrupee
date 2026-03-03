@@ -1,0 +1,228 @@
+.PocketRupee-products-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-products-hero-inner {
+  max-width: 40rem;
+}
+
+.PocketRupee-products-hero .PocketRupee-page-title {
+  color: var(--PocketRupee-white);
+  margin-bottom: 0.75rem;
+}
+
+.PocketRupee-products-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.PocketRupee-products-overview {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-products-overview-inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-products-overview-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.PocketRupee-products-overview-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--PocketRupee-text);
+  margin: 0 0 1.25rem;
+}
+
+.PocketRupee-products-overview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PocketRupee-products-overview-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-products-overview-list li i {
+  color: var(--PocketRupee-accent);
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.PocketRupee-products-overview-visual img {
+  width: 100%;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+}
+
+.PocketRupee-products-fees {
+  padding: 4rem 0;
+  background: var(--PocketRupee-bg);
+}
+
+.PocketRupee-products-fees-inner {
+  text-align: center;
+}
+
+.PocketRupee-products-fees-inner .PocketRupee-section-title {
+  margin-bottom: 2rem;
+}
+
+.PocketRupee-products-fees-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .PocketRupee-products-fees-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.PocketRupee-products-fee-item {
+  background: var(--PocketRupee-white);
+  padding: 1.75rem;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PocketRupee-products-fee-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--PocketRupee-shadow-hover);
+}
+
+.PocketRupee-products-fee-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, var(--PocketRupee-primary-light) 100%);
+  color: var(--PocketRupee-white);
+  font-size: 1.25rem;
+  border-radius: var(--PocketRupee-radius-sm);
+  margin: 0 auto 1rem;
+}
+
+.PocketRupee-products-fee-item h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-products-fee-item p {
+  font-size: 0.9375rem;
+  color: var(--PocketRupee-text-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.PocketRupee-products-example {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-products-example-desc {
+  margin-bottom: 1.5rem;
+}
+
+.PocketRupee-products-example-card {
+  max-width: 32rem;
+  background: var(--PocketRupee-bg);
+  border-radius: var(--PocketRupee-radius);
+  padding: 2rem;
+  box-shadow: var(--PocketRupee-shadow);
+}
+
+.PocketRupee-products-example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+}
+
+.PocketRupee-products-example-header span {
+  color: var(--PocketRupee-text-muted);
+}
+
+.PocketRupee-products-example-header strong {
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-products-example-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.9375rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-products-example-row span:first-child {
+  flex-shrink: 0;
+}
+
+.PocketRupee-products-example-row span:last-child {
+  text-align: right;
+  color: var(--PocketRupee-text-muted);
+}
+
+.PocketRupee-products-example-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0 0;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.PocketRupee-products-example-total span {
+  color: var(--PocketRupee-text);
+  font-weight: 600;
+}
+
+.PocketRupee-products-example-total strong {
+  color: var(--PocketRupee-primary);
+  font-size: 1.25rem;
+}
+
+.PocketRupee-products-cta {
+  padding: 4rem 0;
+  background: var(--PocketRupee-bg);
+}
+
+.PocketRupee-products-cta-inner {
+  text-align: center;
+}
+
+.PocketRupee-products-cta-inner .PocketRupee-section-title {
+  margin-bottom: 0.5rem;
+}
+
+.PocketRupee-products-cta-inner .PocketRupee-text-muted {
+  margin-bottom: 1.5rem;
+}

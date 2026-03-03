@@ -1,0 +1,90 @@
+.PocketRupee-privacy-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-privacy-hero-inner {
+  max-width: 40rem;
+}
+
+.PocketRupee-privacy-hero .PocketRupee-page-title {
+  color: var(--PocketRupee-white);
+  margin-bottom: 0.75rem;
+}
+
+.PocketRupee-privacy-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.PocketRupee-privacy-content {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-privacy-body {
+  max-width: 48rem;
+}
+
+.PocketRupee-privacy-block {
+  margin-bottom: 2.5rem;
+}
+
+.PocketRupee-privacy-block:last-child {
+  margin-bottom: 0;
+}
+
+.PocketRupee-privacy-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--PocketRupee-text);
+  margin: 0 0 1rem;
+}
+
+.PocketRupee-privacy-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--PocketRupee-text);
+  margin: 0 0 1rem;
+}
+
+.PocketRupee-privacy-text:last-child {
+  margin-bottom: 0;
+}
+
+.PocketRupee-privacy-list {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.PocketRupee-privacy-list li {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--PocketRupee-text);
+  margin-bottom: 0.5rem;
+}
+
+.PocketRupee-privacy-contact {
+  background: var(--PocketRupee-bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--PocketRupee-radius-sm);
+  margin: 1rem 0;
+}
+
+.PocketRupee-privacy-contact p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--PocketRupee-text);
+  margin: 0 0 0.5rem;
+}
+
+.PocketRupee-privacy-contact p:last-child {
+  margin-bottom: 0;
+}
+
+.PocketRupee-privacy-contact a {
+  color: var(--PocketRupee-primary);
+}

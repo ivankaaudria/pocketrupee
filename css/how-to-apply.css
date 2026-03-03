@@ -1,0 +1,100 @@
+.PocketRupee-apply-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-apply-hero-inner {
+  max-width: 40rem;
+}
+
+.PocketRupee-apply-hero .PocketRupee-page-title {
+  color: var(--PocketRupee-white);
+  margin-bottom: 0.75rem;
+}
+
+.PocketRupee-apply-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.PocketRupee-apply-steps {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-apply-step {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.PocketRupee-apply-step:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-apply-step {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .PocketRupee-apply-step-alt {
+    direction: rtl;
+  }
+
+  .PocketRupee-apply-step-alt > * {
+    direction: ltr;
+  }
+
+  .PocketRupee-apply-step-alt .PocketRupee-apply-step-visual {
+    grid-column: 2;
+  }
+
+  .PocketRupee-apply-step-alt .PocketRupee-apply-step-content {
+    grid-column: 1;
+  }
+}
+
+.PocketRupee-apply-step-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PocketRupee-apply-step-visual img {
+  width: 100%;
+  max-width: 10rem;
+  border-radius: var(--PocketRupee-radius-sm);
+}
+
+.PocketRupee-apply-step-content {
+  padding: 0;
+}
+
+.PocketRupee-apply-step-num {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--PocketRupee-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.PocketRupee-apply-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--PocketRupee-text);
+  margin: 0 0 0.75rem;
+}
+
+.PocketRupee-apply-step-content p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--PocketRupee-text-muted);
+  margin: 0;
+}

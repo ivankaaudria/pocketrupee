@@ -1,0 +1,162 @@
+.PocketRupee-about-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-about-hero-inner {
+  max-width: 40rem;
+}
+
+.PocketRupee-about-hero .PocketRupee-page-title {
+  color: var(--PocketRupee-white);
+  margin-bottom: 0.75rem;
+}
+
+.PocketRupee-about-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.PocketRupee-about-intro {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-about-intro-inner {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-about-intro-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.PocketRupee-about-intro-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--PocketRupee-text);
+  margin: 0 0 1rem;
+}
+
+.PocketRupee-about-intro-text:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.PocketRupee-about-intro-visual img {
+  width: 100%;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+}
+
+.PocketRupee-about-advantages {
+  padding: 4rem 0;
+  background: var(--PocketRupee-bg);
+}
+
+.PocketRupee-about-advantages-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.PocketRupee-about-advantages-title .PocketRupee-section-title {
+  margin-bottom: 0.5rem;
+}
+
+.PocketRupee-about-advantages-cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .PocketRupee-about-advantages-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .PocketRupee-about-advantages-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.PocketRupee-about-adv-card {
+  background: var(--PocketRupee-white);
+  padding: 1.75rem;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PocketRupee-about-adv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--PocketRupee-shadow-hover);
+}
+
+.PocketRupee-about-adv-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, var(--PocketRupee-primary-light) 100%);
+  color: var(--PocketRupee-white);
+  font-size: 1.25rem;
+  border-radius: var(--PocketRupee-radius-sm);
+  margin-bottom: 1rem;
+}
+
+.PocketRupee-about-adv-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-about-adv-card p {
+  font-size: 0.9375rem;
+  color: var(--PocketRupee-text-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.PocketRupee-about-requirements {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-about-requirements-inner {
+  max-width: 36rem;
+}
+
+.PocketRupee-about-requirements-desc {
+  margin-bottom: 1.5rem;
+}
+
+.PocketRupee-about-requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.PocketRupee-about-requirements-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-about-requirements-list li i {
+  color: var(--PocketRupee-accent);
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}

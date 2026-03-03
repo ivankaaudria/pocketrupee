@@ -1,0 +1,616 @@
+:root {
+  --PocketRupee-primary: #1e3a5f;
+  --PocketRupee-primary-light: #2563eb;
+  --PocketRupee-accent: #f59e0b;
+  --PocketRupee-accent-hover: #d97706;
+  --PocketRupee-dark: #374151;
+  --PocketRupee-text: #1f2937;
+  --PocketRupee-text-muted: #6b7280;
+  --PocketRupee-bg: #f9fafb;
+  --PocketRupee-bg-alt: #f3f4f6;
+  --PocketRupee-white: #ffffff;
+  --PocketRupee-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --PocketRupee-shadow-hover: 0 14px 40px rgba(0, 0, 0, 0.12);
+  --PocketRupee-radius: 0.75rem;
+  --PocketRupee-radius-sm: 0.5rem;
+  --PocketRupee-max-width: 75rem;
+  --PocketRupee-header-height: 4.5rem;
+  --PocketRupee-line-height: 1.6;
+  --PocketRupee-line-height-tight: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Noto Sans', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: var(--PocketRupee-line-height);
+  color: var(--PocketRupee-text);
+  background-color: var(--PocketRupee-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--PocketRupee-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--PocketRupee-primary-light);
+}
+
+.PocketRupee-container {
+  width: 100%;
+  max-width: var(--PocketRupee-max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-container {
+    padding: 0 2rem;
+  }
+}
+
+.PocketRupee-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--PocketRupee-header-height);
+  background: var(--PocketRupee-white);
+  box-shadow: var(--PocketRupee-shadow);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.PocketRupee-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--PocketRupee-max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-header-inner {
+    padding: 0 2rem;
+  }
+}
+
+.PocketRupee-logo-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.PocketRupee-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.PocketRupee-brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.PocketRupee-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.PocketRupee-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-brand-entity {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--PocketRupee-text-muted);
+}
+
+.PocketRupee-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.PocketRupee-nav a {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--PocketRupee-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--PocketRupee-radius-sm);
+}
+
+.PocketRupee-nav a:hover {
+  color: var(--PocketRupee-primary);
+}
+
+.PocketRupee-nav a.PocketRupee-nav-active {
+  color: var(--PocketRupee-primary);
+  background: rgba(245, 158, 11, 0.15);
+  border-bottom: 3px solid var(--PocketRupee-accent);
+}
+
+.PocketRupee-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--PocketRupee-text);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .PocketRupee-nav-toggle {
+    display: none;
+  }
+}
+
+.PocketRupee-mobile-nav {
+  position: fixed;
+  top: var(--PocketRupee-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--PocketRupee-white);
+  padding: 2rem 1.25rem;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.PocketRupee-mobile-nav.PocketRupee-mobile-nav-open {
+  transform: translateX(0);
+}
+
+.PocketRupee-mobile-nav a {
+  display: block;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--PocketRupee-text);
+  border-bottom: 1px solid var(--PocketRupee-bg-alt);
+}
+
+.PocketRupee-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border: none;
+  border-radius: var(--PocketRupee-radius-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PocketRupee-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--PocketRupee-shadow-hover);
+}
+
+.PocketRupee-btn-primary {
+  background: linear-gradient(135deg, var(--PocketRupee-accent) 0%, var(--PocketRupee-accent-hover) 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-btn-primary:hover {
+  opacity: 0.95;
+}
+
+.PocketRupee-btn-outline {
+  background: transparent;
+  color: var(--PocketRupee-primary);
+  border: 2px solid var(--PocketRupee-primary);
+}
+
+
+.PocketRupee-footer-brand-wrap {
+  flex-shrink: 0;
+}
+
+.PocketRupee-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.PocketRupee-footer-brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.95;
+}
+
+.PocketRupee-footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.PocketRupee-footer-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-footer-brand-entity {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.PocketRupee-footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.PocketRupee-footer-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.PocketRupee-footer-info-item i {
+  flex-shrink: 0;
+  width: 1.25rem;
+  margin-top: 0.2rem;
+  color: var(--PocketRupee-accent);
+}
+
+.PocketRupee-footer-info-item a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.PocketRupee-footer-info-item a:hover {
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.PocketRupee-footer-links a {
+  font-size: 0.9375rem;
+}
+
+.PocketRupee-cookie-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.PocketRupee-cookie-overlay.PocketRupee-cookie-bar-visible {
+  display: flex;
+  opacity: 1;
+}
+
+.PocketRupee-cookie-modal {
+  width: 100%;
+  max-width: 26rem;
+  background: var(--PocketRupee-white);
+  border-radius: var(--PocketRupee-radius);
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.PocketRupee-cookie-overlay.PocketRupee-cookie-bar-visible .PocketRupee-cookie-modal {
+  transform: scale(1);
+}
+
+.PocketRupee-cookie-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--PocketRupee-accent) 0%, var(--PocketRupee-accent-hover) 100%);
+  color: var(--PocketRupee-white);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.PocketRupee-cookie-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--PocketRupee-text);
+  margin: 0 0 0.75rem;
+}
+
+.PocketRupee-cookie-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--PocketRupee-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.PocketRupee-cookie-link {
+  color: var(--PocketRupee-primary);
+  font-weight: 600;
+}
+
+.PocketRupee-cookie-link:hover {
+  color: var(--PocketRupee-primary-light);
+}
+
+.PocketRupee-cookie-btn {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--PocketRupee-accent) 0%, var(--PocketRupee-accent-hover) 100%);
+  color: var(--PocketRupee-white);
+  border: none;
+  border-radius: var(--PocketRupee-radius-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PocketRupee-cookie-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--PocketRupee-shadow-hover);
+}
+
+.PocketRupee-main {
+  padding-top: var(--PocketRupee-header-height);
+}
+
+.PocketRupee-page-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: var(--PocketRupee-line-height-tight);
+  color: var(--PocketRupee-text);
+  margin: 0 0 1rem;
+}
+
+.PocketRupee-section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: var(--PocketRupee-line-height-tight);
+  color: var(--PocketRupee-text);
+  margin: 0 0 1.5rem;
+}
+
+.PocketRupee-text-muted {
+  color: var(--PocketRupee-text-muted);
+  font-size: 0.9375rem;
+}
+/* =====================================
+   PocketRupee Footer - Clean Version
+===================================== */
+
+.PocketRupee-footer {
+  background-color: #1d2e3f;
+  color: #ffffff;
+  padding: 55px 0 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.PocketRupee-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout */
+.PocketRupee-footer-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.PocketRupee-footer-top {
+  margin-bottom: 25px;
+}
+
+.PocketRupee-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.PocketRupee-footer-brand-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.PocketRupee-footer-brand-entity {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* 2 Column Content */
+.PocketRupee-footer-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* Description */
+.PocketRupee-footer-description {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 30px;
+  max-width: 620px;
+}
+
+/* Legal */
+.PocketRupee-footer-legal {
+  margin-top: 25px;
+  padding-top: 18px;
+}
+
+.PocketRupee-footer-legal p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.PocketRupee-footer-legal strong {
+  font-weight: 600;
+}
+
+/* Navigation */
+.PocketRupee-footer-col-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4c8ef8;
+}
+
+.PocketRupee-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.PocketRupee-footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.PocketRupee-footer-links a:hover {
+  color: #4180cd;
+  transform: translateX(3px);
+}
+
+
+.PocketRupee-footer-bottom p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.882);
+  margin: 0;
+  max-width: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .PocketRupee-footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .PocketRupee-footer-description {
+    max-width: 100%;
+  }
+
+  .PocketRupee-footer-bottom {
+    margin-top: 40px;
+  }
+}
+
+
+/* Legal Card Style */
+.PocketRupee-footer-legal {
+  margin-top: 30px;
+}
+
+
+/* Navigation 2 Column */
+.PocketRupee-footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.PocketRupee-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.PocketRupee-footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.PocketRupee-footer-links a:hover {
+  color: #6fb1ff;
+}
+
+.PocketRupee-footer-legal {
+  margin-top: 25px;
+  padding-top: 20px;
+  position: relative;
+  max-width: 620px;
+}
+
+.PocketRupee-footer-legal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.05)
+  );
+}

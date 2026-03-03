@@ -1,0 +1,104 @@
+.PocketRupee-contact-hero {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+  color: var(--PocketRupee-white);
+}
+
+.PocketRupee-contact-hero-inner {
+  max-width: 40rem;
+}
+
+.PocketRupee-contact-hero .PocketRupee-page-title {
+  color: var(--PocketRupee-white);
+  margin-bottom: 0.75rem;
+}
+
+.PocketRupee-contact-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.PocketRupee-contact-info {
+  padding: 4rem 0;
+  background: var(--PocketRupee-white);
+}
+
+.PocketRupee-contact-info-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .PocketRupee-contact-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .PocketRupee-contact-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.PocketRupee-contact-card {
+  background: var(--PocketRupee-bg);
+  padding: 2rem;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PocketRupee-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--PocketRupee-shadow-hover);
+}
+
+.PocketRupee-contact-card-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, var(--PocketRupee-primary-light) 100%);
+  color: var(--PocketRupee-white);
+  font-size: 1.25rem;
+  border-radius: var(--PocketRupee-radius-sm);
+  margin-bottom: 1rem;
+}
+
+.PocketRupee-contact-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--PocketRupee-text);
+}
+
+.PocketRupee-contact-card-text {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--PocketRupee-text-muted);
+  margin: 0;
+}
+
+.PocketRupee-contact-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--PocketRupee-primary);
+}
+
+.PocketRupee-contact-link:hover {
+  color: var(--PocketRupee-primary-light);
+}
+
+.PocketRupee-contact-map-wrap {
+  padding: 0 0 4rem;
+  background: var(--PocketRupee-bg);
+}
+
+.PocketRupee-contact-map-inner img {
+  width: 100%;
+  border-radius: var(--PocketRupee-radius);
+  box-shadow: var(--PocketRupee-shadow);
+}
