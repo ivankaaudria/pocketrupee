@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/products.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
@@ -17,13 +20,13 @@
         <img src="img/logo-1.png" alt="PocketRupee" id="company-logo" width="60" height="60">
         <div class="PocketRupee-brand-text">
           <span class="PocketRupee-brand-name">PocketRupee</span>
-           <!-- <span class="PocketRupee-brand-entity">Allen's Housing & Finance Limited</span> -->
         </div>
       </a>
       <nav class="PocketRupee-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="products.html" class="PocketRupee-nav-active">Products</a>
+        <a href="partner.html">Partner</a>
         <a href="contact.html">Contact</a>
         <a href="privacy-policy.html">Privacy Policy</a>
       </nav>
@@ -33,15 +36,19 @@
       </button>
     </div>
   </header>
+
   <div class="PocketRupee-mobile-nav" id="PocketRupee-mobile-nav" aria-hidden="true">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
+    <a href="partner.html">Partner</a>
     <a href="contact.html">Contact</a>
     <a href="privacy-policy.html">Privacy Policy</a>
   </div>
 
   <main class="PocketRupee-main">
+
+    <!-- Hero -->
     <div class="PocketRupee-products-hero">
       <div class="PocketRupee-container">
         <div class="PocketRupee-products-hero-inner PocketRupee-reveal">
@@ -52,6 +59,7 @@
       </div>
     </div>
 
+    <!-- Product Overview -->
     <div class="PocketRupee-products-overview">
       <div class="PocketRupee-container">
         <div class="PocketRupee-products-overview-inner">
@@ -72,6 +80,7 @@
       </div>
     </div>
 
+    <!-- Fees and Charges -->
     <div class="PocketRupee-products-fees">
       <div class="PocketRupee-container">
         <div class="PocketRupee-products-fees-inner PocketRupee-reveal">
@@ -97,46 +106,74 @@
       </div>
     </div>
 
+    <!-- Calculation Example -->
     <div class="PocketRupee-products-example">
       <div class="PocketRupee-container">
         <div class="PocketRupee-products-example-inner PocketRupee-reveal">
-          <h2 class="PocketRupee-section-title">Calculation Example</h2>
-          <p class="PocketRupee-text-muted PocketRupee-products-example-desc">See how your loan repayment is calculated
-            with this sample:</p>
-          <div class="PocketRupee-products-example-card">
-            <div class="PocketRupee-products-example-header">
-              <span>Loan Amount</span>
-              <strong>INR 10,000</strong>
-            </div>
-            <div class="PocketRupee-products-example-header">
-              <span>Loan Tenure</span>
-              <strong>120 days</strong>
-            </div>
-            <div class="PocketRupee-products-example-header">
-              <span>Annual Interest Rate</span>
-              <strong>25%</strong>
-            </div>
-            <div class="PocketRupee-products-example-row">
-              <span>Total Interest Payable</span>
-              <span>INR 10,000 × 25% ÷ 12 × 6 = INR 1,250</span>
-            </div>
-            <div class="PocketRupee-products-example-row">
-              <span>Processing Fee (4%)</span>
-              <span>INR 10,000 × 4% = INR 400</span>
-            </div>
-            <div class="PocketRupee-products-example-row">
-              <span>GST on Processing Fee</span>
-              <span>INR 400 × 18% = INR 72</span>
-            </div>
-            <div class="PocketRupee-products-example-total">
-              <span>Total Repayment Amount</span>
-              <strong>INR 11,722</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
+          <!-- KIRI: teks + card -->
+          <div class="PocketRupee-products-example-left">
+            <h2 class="PocketRupee-section-title">Calculation Example</h2>
+            <p class="PocketRupee-text-muted PocketRupee-products-example-desc">
+              See how your loan repayment is calculated with this sample:
+            </p>
+            <div class="PocketRupee-products-example-card">
+
+              <div class="PocketRupee-products-example-header">
+                <span>Loan Amount</span>
+                <strong>₹10,000</strong>
+              </div>
+              <div class="PocketRupee-products-example-header">
+                <span>Loan Term</span>
+                <strong>15 days</strong>
+              </div>
+              <div class="PocketRupee-products-example-header">
+                <span>Interest Rate</span>
+                <strong>0.50% per day</strong>
+              </div>
+
+              <div class="PocketRupee-products-example-row">
+                <span>Process Fee</span>
+                <span>₹2,118.64</span>
+              </div>
+              <div class="PocketRupee-products-example-row">
+                <span>Document Fee</span>
+                <span>₹84.75</span>
+              </div>
+              <div class="PocketRupee-products-example-row">
+                <span>GST</span>
+                <span>₹396.61</span>
+              </div>
+              <div class="PocketRupee-products-example-row">
+                <span>Interest</span>
+                <span>₹750.00</span>
+              </div>
+              <div class="PocketRupee-products-example-row disbursal">
+                <span>Disbursal Amount</span>
+                <span>₹7,400.00</span>
+              </div>
+
+              <div class="PocketRupee-products-example-total">
+                <span>Total Amount Due</span>
+                <strong>₹10,750</strong>
+              </div>
+
+            </div>
+            <p class="PocketRupee-products-example-note">
+              * Disbursal amount is the net amount received after upfront fee deductions.
+            </p>
+          </div>
+
+          <!-- KANAN: image -->
+          <div class="PocketRupee-products-example-right">
+            <img src="img/illustration.png" alt="Loan calculation illustration">
+          </div>
+
+        </div><!-- tutup inner -->
+      </div><!-- tutup container -->
+    </div><!-- tutup section -->
+
+    <!-- CTA -->
     <div class="PocketRupee-products-cta">
       <div class="PocketRupee-container">
         <div class="PocketRupee-products-cta-inner PocketRupee-reveal">
@@ -147,66 +184,70 @@
       </div>
     </div>
 
-    <footer class="PocketRupee-footer">
-      <div class="PocketRupee-container">
-        <div class="PocketRupee-footer-inner">
+  </main>
 
-          <!-- Row 1: Logo -->
-          <div class="PocketRupee-footer-top">
-            <div class="PocketRupee-footer-brand">
-              <img src="img/logo-1.png" alt="PocketRupee" width="60">
-              <div>
-                <span class="PocketRupee-footer-brand-name">PocketRupee</span>
-                <!-- <span class="PocketRupee-footer-brand-entity">
+  <!-- Footer -->
+  <footer class="PocketRupee-footer">
+    <div class="PocketRupee-container">
+      <div class="PocketRupee-footer-inner">
+
+        <!-- Row 1: Logo -->
+        <div class="PocketRupee-footer-top">
+          <div class="PocketRupee-footer-brand">
+            <img src="img/logo-1.png" alt="PocketRupee" width="60">
+            <div>
+              <span class="PocketRupee-footer-brand-name">PocketRupee</span>
+              <!-- <span class="PocketRupee-footer-brand-entity">
                   Allen's Housing & Finance Limited
                 </span> -->
-              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="PocketRupee-footer-content">
+          <!-- Left -->
+          <div>
+            <p class="PocketRupee-footer-description">
+              PocketRupee Application (owned by Phrenological info Audit and App Solution Private Limited) is a
+              digital lending application (DLA) of Allen Housing & Finance Limited (NBFC)
+            </p>
+            <div class="PocketRupee-footer-legal">
+              <p>
+                CIN: U72900UP2022PTC168652</p>
+            </div>
+            <br>
+            <div class="PocketRupee-footer-bottom">
+              <p>Copyright &copy;2026.</p>
             </div>
           </div>
 
-          <div class="PocketRupee-footer-content">
-            <!-- Left -->
-            <div>
-              <p class="PocketRupee-footer-description">
-                PocketRupee Application (owned by Phrenological info Audit and App Solution Private Limited) is a digital lending application (DLA) of Allen Housing & Finance Limited (NBFC)
-              </p>
-              <div class="PocketRupee-footer-legal">
-                <p><strong>
-                    PocketRupee is operated by Allen's Housing & Finance Limited, an NBFC registered <br>with the RBI
-                  </strong></p>
-                <p>RBI Reg. No. B.05.06399</p>
+          <!-- Middle -->
+          <div>
+            <p class="PocketRupee-footer-col-title">Navigation</p>
+            <div class="PocketRupee-footer-links-grid">
+              <div class="PocketRupee-footer-links">
+                <a href="about.html">About</a>
+                <a href="compliance.html">Compliance</a>
+                <a href="products.html">Products</a>
+                <a href="partner.html">Partner</a>
               </div>
-            </div>
 
-            <!-- Middle -->
-            <div>
-              <p class="PocketRupee-footer-col-title">Navigation</p>
-
-              <div class="PocketRupee-footer-links-grid">
-                <div class="PocketRupee-footer-links">
-                  <a href="about.html">About</a>
-                  <a href="compliance.html">Compliance</a>
-                  <a href="products.html">Products</a>
-                </div>
-
-                <div class="PocketRupee-footer-links">
-                  <a href="how-to-apply.html">How to Apply</a>
-                  <a href="contact.html">Contact</a>
-                  <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-                <div class="PocketRupee-footer-bottom">
-                  <p>Copyright &copy;2026.</p>
-                </div>
+              <div class="PocketRupee-footer-links">
+                <a href="how-to-apply.html">How to Apply</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
               </div>
             </div>
           </div>
-
         </div>
 
       </div>
-    </footer>
-  </main>
 
+    </div>
+  </footer>
+
+
+  <!-- Cookie Notice -->
   <div class="PocketRupee-cookie-overlay" id="PocketRupee-cookie-bar" role="dialog" aria-modal="true"
     aria-label="Cookie notice">
     <div class="PocketRupee-cookie-modal">

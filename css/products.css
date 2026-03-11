@@ -136,80 +136,155 @@
   margin: 0;
   line-height: 1.55;
 }
+/* ═══════════════════════════════════════
+   PRODUCTS PAGE — products.css
+═══════════════════════════════════════ */
 
+/* ── CALCULATION EXAMPLE SECTION ── */
 .PocketRupee-products-example {
-  padding: 4rem 0;
   background: var(--PocketRupee-white);
+  padding: 64px 0;
+}
+
+.PocketRupee-products-example-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
 .PocketRupee-products-example-desc {
-  margin-bottom: 1.5rem;
+  font-size: 15px;
+  color: #6b7f96;
+  margin-top: 8px;
+  margin-bottom: 32px;
 }
 
+.PocketRupee-products-example-note {
+  font-size: 12px;
+  color: #b0c0cf;
+  margin-top: 16px;
+  padding-left: 2px;
+}
+
+/* ── IMAGE SIDE ── */
+.PocketRupee-products-example-right img {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ── CARD ── */
 .PocketRupee-products-example-card {
-  max-width: 32rem;
-  background: var(--PocketRupee-bg);
-  border-radius: var(--PocketRupee-radius);
-  padding: 2rem;
-  box-shadow: var(--PocketRupee-shadow);
+  background: #ffffff;
+  border: 1px solid #e4eef6;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10, 149, 248, 0.06);
 }
 
+.PocketRupee-products-example-card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #0A95F8 0%, #60bafa 60%, transparent 100%);
+}
+
+/* ── HEADER ROWS (loan info) ── */
 .PocketRupee-products-example-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 1rem;
+  padding: 16px 28px;
+  background: #086eb6;
+  color: #ffffff;
+  gap: 12px;
+}
+
+.PocketRupee-products-example-header + .PocketRupee-products-example-header {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .PocketRupee-products-example-header span {
-  color: var(--PocketRupee-text-muted);
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.75;
+  letter-spacing: 0.01em;
 }
 
 .PocketRupee-products-example-header strong {
-  color: var(--PocketRupee-text);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
+/* ── BREAKDOWN ROWS ── */
 .PocketRupee-products-example-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 0.9375rem;
-  color: var(--PocketRupee-text);
+  align-items: center;
+  padding: 16px 28px;
+  border-bottom: 1px solid #f0f5fa;
+  gap: 16px;
 }
 
 .PocketRupee-products-example-row span:first-child {
-  flex-shrink: 0;
+  font-size: 14px;
+  color: #3d5166;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
+
 
 .PocketRupee-products-example-row span:last-child {
-  text-align: right;
-  color: var(--PocketRupee-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f1f30;
+  white-space: nowrap;
 }
 
+/* Disbursal row */
+.PocketRupee-products-example-row.disbursal {
+  background: #f0f9ff;
+  border-bottom: none;
+}
+
+.PocketRupee-products-example-row.disbursal span:first-child {
+  color: #0A95F8;
+  font-weight: 500;
+}
+
+.PocketRupee-products-example-row.disbursal span:last-child {
+  color: #0A95F8;
+}
+
+/* ── TOTAL ROW ── */
 .PocketRupee-products-example-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 0 0;
-  margin-top: 0.5rem;
-  font-size: 1.125rem;
+  padding: 20px 28px;
+  background: #0d1f2e;
+  gap: 12px;
 }
 
 .PocketRupee-products-example-total span {
-  color: var(--PocketRupee-text);
-  font-weight: 600;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .PocketRupee-products-example-total strong {
-  color: var(--PocketRupee-primary);
-  font-size: 1.25rem;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
+/* ── CTA SECTION ── */
 .PocketRupee-products-cta {
   padding: 4rem 0;
   background: var(--PocketRupee-bg);
@@ -225,4 +300,68 @@
 
 .PocketRupee-products-cta-inner .PocketRupee-text-muted {
   margin-bottom: 1.5rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .PocketRupee-products-example-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .PocketRupee-products-example-right {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .PocketRupee-products-example-header,
+  .PocketRupee-products-example-row,
+  .PocketRupee-products-example-total {
+    padding: 14px 20px;
+  }
+
+  .PocketRupee-products-example-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .PocketRupee-products-example-row span:last-child {
+    font-size: 15px;
+  }
+}
+.PocketRupee-products-example-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.PocketRupee-products-example-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.PocketRupee-products-example-right img {
+  width: 120%;           /* lebih besar dari container */
+  max-width: none;       /* hapus batasan max-width */
+  display: block;
+  transform: none;       /* hapus transform scale */
+  margin-left: 24px;
+  margin-bottom: -64px;  /* tarik turun supaya nempel ke batas section */
+}
+
+@media (max-width: 900px) {
+  .PocketRupee-products-example-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .PocketRupee-products-example-right {
+    display: none; /* sembunyikan gambar di mobile */
+  }
 }

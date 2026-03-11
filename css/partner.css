@@ -1,0 +1,279 @@
+.PocketRupee-partner-hero {
+    padding: 4rem 0 3rem;
+    background: linear-gradient(135deg, var(--PocketRupee-primary) 0%, #0f2744 100%);
+    color: var(--PocketRupee-white);
+}
+
+.PocketRupee-partner-hero-inner {
+    max-width: 40rem;
+}
+
+.PocketRupee-partner-hero .PocketRupee-page-title {
+    color: var(--PocketRupee-white);
+    margin-bottom: 0.75rem;
+}
+
+.PocketRupee-partner-hero-desc {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* ── DLP VARIABLES ── */
+:root {
+    --brand: #0A95F8;
+    --brand-light: #e6f4ff;
+    --brand-mid: #60bafa;
+    --text-dark: #0f1f30;
+    --text-body: #4a5f72;
+    --text-muted: #8fa3b4;
+    --border: #dce8f0;
+    /* ✅ ini yang tadinya hilang, bikin border jadi abu */
+    --white: #ffffff;
+}
+
+/* ✅ Wrapper: paksa background putih supaya tidak kena bocoran hero */
+.dlp-wrapper {
+    background: #f9fafb;
+    padding: 1px 0;
+    /* mencegah margin collapse */
+}
+
+/* ── DLP SECTION ── */
+.dlp-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.dlp-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.dlp-title {
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+}
+
+.dlp-description {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 36px;
+}
+
+/* ── CARD ── */
+.dlp-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(48, 57, 65, 0.229);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dlp-card:hover {
+    box-shadow: 0 8px 32px rgba(10, 149, 248, 0.085);
+    border-color: rgba(10, 149, 248, 0.3);
+}
+
+
+.dlp-card-body {
+    display: grid;
+    grid-template-columns: auto 1px 1fr;
+    align-items: center;
+    padding: 32px 36px;
+}
+
+/* ── LOGO SIDE ── */
+.dlp-logo-side {
+    padding-right: 36px;
+    text-align: center;
+    min-width: 160px;
+}
+
+.dlp-logo-box {
+    width: 150px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.dlp-logo-box svg {
+    width: 40px;
+    height: 40px;
+}
+
+.dlp-logo-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+}
+
+.dlp-logo-type {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--brand);
+    background: var(--brand-light);
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-top: 5px;
+}
+
+/* ── DIVIDER ── */
+.dlp-divider {
+    width: 1px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--border), transparent);
+}
+
+/* ── INFO SIDE ── */
+.dlp-info-side {
+    padding-left: 36px;
+}
+
+.dlp-info-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.dlp-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.dlp-info-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    min-width: 70px;
+    flex-shrink: 0;
+}
+
+.dlp-info-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.dlp-info-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--brand);
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.dlp-info-link:hover {
+    color: #0570c9;
+    border-color: #0570c9;
+}
+
+/* ── POLICY BADGES ── */
+.dlp-policy-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.dlp-policy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: #f4f7fa;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: default;
+}
+
+.dlp-policy-badge svg {
+    width: 13px;
+    height: 13px;
+    opacity: 0.5;
+}
+
+.dlp-policy-badge.active {
+    color: var(--brand);
+    background: var(--brand-light);
+    border: 1px solid rgba(10, 149, 248, 0.25);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.dlp-policy-badge.active:hover {
+    background: rgba(10, 149, 248, 0.12);
+}
+
+.dlp-soon {
+    font-size: 10px;
+    background: #eee;
+    color: #999;
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-left: 4px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+    .dlp-card-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px 20px;
+    }
+
+    .dlp-logo-side {
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+    }
+
+    .dlp-logo-box {
+        margin: 0;
+    }
+
+    .dlp-divider {
+        display: none;
+    }
+
+    .dlp-info-side {
+        padding-left: 0;
+    }
+
+    .dlp-policy-row {
+        flex-direction: column;
+    }
+}
