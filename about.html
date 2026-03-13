@@ -9,6 +9,90 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="icon" type="image/png" href="img/logo-1.png">
+  <style>
+    /* Company Details Section */
+    .PocketRupee-company-details {
+      padding: 60px 0;
+      background-color: #f8faff;
+    }
+
+    .PocketRupee-company-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .PocketRupee-company-detail-item {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.041);
+    }
+
+    .PocketRupee-company-detail-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #4c8ef8, #15305c);
+      border-radius: 8px 0 0 8px;
+    }
+
+    .PocketRupee-detail-label {
+      font-size: 12px;
+      font-weight: 800;
+      color: #2f69c6;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .PocketRupee-detail-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1d2e3f;
+    }
+
+    @media (max-width: 600px) {
+      .PocketRupee-company-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer Fix */
+    .PocketRupee-footer {
+      background-color: #1d2e3f;
+      color: #ffffff;
+      padding: 55px 0 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .PocketRupee-footer-disclaimer {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 14px 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .PocketRupee-footer-disclaimer p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .PocketRupee-footer-disclaimer strong {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
 </head>
 
 <body>
@@ -18,7 +102,6 @@
         <img src="img/logo-1.png" alt="PocketRupee" id="company-logo" width="60" height="60">
         <div class="PocketRupee-brand-text">
           <span class="PocketRupee-brand-name">PocketRupee</span>
-           <!-- <span class="PocketRupee-brand-entity">Allen's Housing & Finance Limited</span> -->
         </div>
       </a>
       <nav class="PocketRupee-nav">
@@ -35,6 +118,7 @@
       </button>
     </div>
   </header>
+
   <div class="PocketRupee-mobile-nav" id="PocketRupee-mobile-nav" aria-hidden="true">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -60,18 +144,45 @@
         <div class="PocketRupee-about-intro-inner">
           <div class="PocketRupee-about-intro-content PocketRupee-reveal">
             <h2 class="PocketRupee-section-title">Our Mission</h2>
-            <p class="PocketRupee-about-intro-text">PocketRupee is an online instant personal loan platform dedicated to
-              providing users with convenient, transparent, and secure credit services. Through a fully digital process,
-              users can complete their loan application and obtain credit support in a short time. The application
-              process is simple and efficient, with no paperwork required.</p>
-            <p class="PocketRupee-about-intro-text">All steps, from application to loan agreement confirmation, can be
-              completed directly on your mobile phone. PocketRupee offers flexible loan amounts ranging from INR 3,000
-              to INR 120,000, supporting a variety of financial needs such as travel, shopping, medical emergencies, and
-              business cash flow requirements.</p>
-            <a href="compliance.html" class="PocketRupee-btn PocketRupee-btn-primary">View Compliance</a>
+            <p class="PocketRupee-about-intro-text">PocketRupee operates as a Lending Service Provider (LSP) in
+              partnership with RBI-registered Non-Banking Financial Companies (NBFCs), facilitating instant personal
+              loans through a cutting-edge digital platform built for full regulatory compliance. All credit products
+              offered through PocketRupee are sourced, processed, and disbursed by its NBFC partners in strict
+              accordance with applicable RBI regulations and guidelines.</p>
+            <p class="PocketRupee-about-intro-text">The platform enables borrowers to complete the entire loan process
+              from application to agreement confirmation on their mobile device, with no physical paperwork required.
+              Loan amounts range from ₹3,000 to ₹1,20,000, catering to diverse financial requirements.</p>
+            <a href="partner.html" class="PocketRupee-btn PocketRupee-btn-primary">Digital Lending Partners</a>
           </div>
           <div class="PocketRupee-about-intro-visual PocketRupee-reveal">
             <img src="img/gp-1.png" alt="PocketRupee trusted loan service" id="about-intro">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Details Section -->
+    <div class="PocketRupee-company-details">
+      <div class="PocketRupee-container">
+        <div class="PocketRupee-reveal">
+          <h2 class="PocketRupee-section-title">Company Details</h2>
+          <div class="PocketRupee-company-details-grid">
+            <div class="PocketRupee-company-detail-item">
+              <span class="PocketRupee-detail-label">Brand Name</span>
+              <span class="PocketRupee-detail-value">PocketRupee</span>
+            </div>
+            <div class="PocketRupee-company-detail-item">
+              <span class="PocketRupee-detail-label">Business Type</span>
+              <span class="PocketRupee-detail-value">Loan Service Provider (LSP)</span>
+            </div>
+            <div class="PocketRupee-company-detail-item">
+              <span class="PocketRupee-detail-label">Compliance</span>
+              <span class="PocketRupee-detail-value">Partnered with RBI-registered NBFCs</span>
+            </div>
+            <div class="PocketRupee-company-detail-item">
+              <span class="PocketRupee-detail-label">Loan Range</span>
+              <span class="PocketRupee-detail-value">₹3,000 to ₹1,20,000</span>
+            </div>
           </div>
         </div>
       </div>
@@ -136,9 +247,6 @@
               <img src="img/logo-1.png" alt="PocketRupee" width="60">
               <div>
                 <span class="PocketRupee-footer-brand-name">PocketRupee</span>
-                <!-- <span class="PocketRupee-footer-brand-entity">
-                  Allen's Housing & Finance Limited
-                </span> -->
               </div>
             </div>
           </div>
@@ -151,8 +259,7 @@
                 digital lending application (DLA) of Allen Housing & Finance Limited (NBFC)
               </p>
               <div class="PocketRupee-footer-legal">
-                <p>
-                  CIN: U72900UP2022PTC168652</p>
+                <p>CIN: U72900UP2022PTC168652</p>
               </div>
               <br>
               <div class="PocketRupee-footer-bottom">
@@ -166,9 +273,9 @@
               <div class="PocketRupee-footer-links-grid">
                 <div class="PocketRupee-footer-links">
                   <a href="about.html">About</a>
-                  <a href="compliance.html">Compliance</a>
                   <a href="products.html">Products</a>
                   <a href="partner.html">Partner</a>
+                  <a href="compliance.html">Compliance</a>
                 </div>
 
                 <div class="PocketRupee-footer-links">
@@ -182,8 +289,17 @@
           </div>
 
         </div>
-
       </div>
+
+      <!-- Important Disclaimer -->
+      <div class="PocketRupee-footer-disclaimer">
+        <div class="PocketRupee-container">
+          <p><strong>Important Disclaimer:</strong> Kanak Loans owned by B R Silver. All loans are provided by our
+            partnered RBI-registered NBFCs. Loan approval is subject to NBFC's credit policy and eligibility criteria.
+          </p>
+        </div>
+      </div>
+
     </footer>
   </main>
 
