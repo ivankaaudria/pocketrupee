@@ -4,11 +4,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | PocketRupee – Fast Loan</title>
+  <title>Grievance | PocketRupee – Fast Loan</title>
   <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/contact.css">
   <link rel="icon" type="image/png" href="img/logo-1.png">
+  <style>
+    .PocketRupee-contact-hero {
+      padding: 60px 0 40px;
+      text-align: left;
+    }
+
+    .PocketRupee-contact-hero-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4c8ef8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .PocketRupee-contact-hero-desc {
+      font-size: 18px;
+      color: #ffffff;
+      max-width: 600px;
+      line-height: 1.7;
+
+    }
+
+    .PocketRupee-grievance-section {
+      padding: 64px 0 64px;
+    }
+
+    .PocketRupee-grievance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .PocketRupee-grievance-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .PocketRupee-grievance-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .PocketRupee-grievance-card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .PocketRupee-grievance-card-level {
+      font-size: 11px;
+      font-weight: 600;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 2px;
+    }
+
+    .PocketRupee-grievance-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1d2e3f;
+      margin: 0;
+    }
+
+    .PocketRupee-grievance-card-desc {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .PocketRupee-grievance-card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .PocketRupee-grievance-card-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .PocketRupee-grievance-card-info-item i {
+      color: #4c8ef8;
+      width: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .PocketRupee-grievance-card-info-item a {
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .PocketRupee-grievance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #f0fdf4;
+      color: #16a34a;
+    }
+
+    .PocketRupee-grievance-badge.warning {
+      background: #fff7ed;
+      color: #ea580c;
+    }
+
+    .PocketRupee-grievance-how {
+      padding: 50px 0;
+      background: #f8faff;
+    }
+
+    .PocketRupee-grievance-how-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .PocketRupee-grievance-how-title i {
+      font-size: 20px;
+      color: #4c8ef8;
+    }
+
+    .PocketRupee-grievance-how-title h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1d2e3f;
+      margin: 0;
+    }
+
+    .PocketRupee-grievance-how-desc {
+      font-size: 16px;
+      margin-top: -20px;
+      color: #6b7280;
+    }
+
+    .PocketRupee-grievance-how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .PocketRupee-grievance-how-col h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1d2e3f;
+      margin-bottom: 14px;
+    }
+
+    .PocketRupee-grievance-how-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .PocketRupee-grievance-how-col ul li {
+      font-size: 13px;
+      color: #4b5563;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .PocketRupee-grievance-how-col ul li::before {
+      content: "•";
+      color: #4c8ef8;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .PocketRupee-grievance-assist {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .PocketRupee-grievance-assist h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1d2e3f;
+      margin-bottom: 8px;
+    }
+
+    .PocketRupee-grievance-assist>.PocketRupee-container>.PocketRupee-reveal>p {
+      font-size: 16px;
+      color: #6b7280;
+      margin-bottom: 32px;
+      margin-top: -20px;
+    }
+
+    .PocketRupee-grievance-assist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .PocketRupee-grievance-assist-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 28px 24px 11px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+
+    .PocketRupee-grievance-assist-card i {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #ffffff;
+      margin: 0 auto 16px;
+      /* tambah ini */
+    }
+
+    .PocketRupee-grievance-assist-card h3 {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #1d2e3f;
+    }
+
+    .PocketRupee-grievance-assist-card p {
+      margin-top: -20px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+
+    .PocketRupee-grievance-notice {
+      padding: 0 0 50px;
+    }
+
+    .PocketRupee-grievance-notice-inner {
+      background: #fffbeb;
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .PocketRupee-grievance-notice-inner>i {
+      color: #f59e0b;
+      font-size: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .PocketRupee-grievance-notice-inner h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #92400e;
+      margin-bottom: 6px;
+    }
+
+    .PocketRupee-grievance-notice-inner p {
+      font-size: 13px;
+      color: #b45309;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    .PocketRupee-footer {
+      background-color: #1d2e3f;
+      color: #ffffff;
+      padding: 55px 0 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .PocketRupee-footer-disclaimer {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 14px 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .PocketRupee-footer-disclaimer p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .PocketRupee-footer-disclaimer strong {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    @media (max-width: 768px) {
+
+      .PocketRupee-grievance-grid,
+      .PocketRupee-grievance-how-grid,
+      .PocketRupee-grievance-assist-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -18,7 +343,6 @@
         <img src="img/logo-1.png" alt="PocketRupee" id="company-logo" width="60" height="60">
         <div class="PocketRupee-brand-text">
           <span class="PocketRupee-brand-name">PocketRupee</span>
-           <!-- <span class="PocketRupee-brand-entity">Allen's Housing & Finance Limited</span> -->
         </div>
       </a>
       <nav class="PocketRupee-nav">
@@ -26,7 +350,7 @@
         <a href="about.html">About</a>
         <a href="products.html">Products</a>
         <a href="partner.html">Partner</a>
-        <a href="contact.html" class="PocketRupee-nav-active">Contact</a>
+        <a href="contact.html" class="PocketRupee-nav-active">Grievance</a>
         <a href="privacy-policy.html">Privacy Policy</a>
       </nav>
       <button type="button" class="PocketRupee-nav-toggle" id="PocketRupee-nav-toggle" aria-label="Open menu"
@@ -40,56 +364,190 @@
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
     <a href="partner.html">Partner</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Grievance</a>
     <a href="privacy-policy.html">Privacy Policy</a>
   </div>
 
   <main class="PocketRupee-main">
+
+    <!-- Hero -->
     <div class="PocketRupee-contact-hero">
       <div class="PocketRupee-container">
         <div class="PocketRupee-contact-hero-inner PocketRupee-reveal">
-          <h1 class="PocketRupee-page-title">Contact Us</h1>
-          <p class="PocketRupee-contact-hero-desc">If you have any questions, please contact our professional customer
-            support team. We are happy to assist you.</p>
+          <!-- <p class="PocketRupee-contact-hero-label">Customer Support</p> -->
+          <h1 class="PocketRupee-page-title">Grievance Redressal</h1>
+          <p class="PocketRupee-contact-hero-desc">We're committed to resolving every concern promptly. If something's
+            not right, here's how to reach us and what to expect at each step.</p>
         </div>
       </div>
     </div>
 
-    <div class="PocketRupee-contact-info">
+    <!-- Escalation Levels -->
+    <div class="PocketRupee-grievance-section">
       <div class="PocketRupee-container">
-        <div class="PocketRupee-contact-info-grid">
-          <div class="PocketRupee-contact-card PocketRupee-reveal">
-            <div class="PocketRupee-contact-card-icon"><i class="fas fa-envelope"></i></div>
-            <h3>Email</h3>
-            <a href="mailto:operation@pocketrupee.in" class="PocketRupee-contact-link">operation@pocketrupee.in</a>
+        <div class="PocketRupee-grievance-grid PocketRupee-reveal">
+
+          <!-- Level 1 -->
+          <div class="PocketRupee-grievance-card">
+            <div class="PocketRupee-grievance-card-header">
+              <div class="PocketRupee-grievance-card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <p class="PocketRupee-grievance-card-level">Level 1</p>
+                <h3>Customer Support</h3>
+              </div>
+            </div>
+            <p class="PocketRupee-grievance-card-desc">First point of contact for any query or issue</p>
+            <div class="PocketRupee-grievance-card-info">
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:operation@pocketrupee.in">operation@pocketrupee.in</a>
+              </div>
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-clock"></i>
+                <span>Monday to Friday, 9:30 AM – 6:30 PM</span>
+              </div>
+            </div>
+            <span class="PocketRupee-grievance-badge"><i class="fas fa-check-circle"></i> Response within 3 working
+              days</span>
           </div>
-          <div class="PocketRupee-contact-card PocketRupee-reveal">
-            <div class="PocketRupee-contact-card-icon"><i class="fas fa-clock"></i></div>
-            <h3>Customer Support Hours</h3>
-            <p class="PocketRupee-contact-card-text">Monday to Friday, 9:30 AM – 6:30 PM</p>
+
+          <!-- Level 2 -->
+          <div class="PocketRupee-grievance-card">
+            <div class="PocketRupee-grievance-card-header">
+              <div class="PocketRupee-grievance-card-icon">
+                <i class="fas fa-arrow-up"></i>
+              </div>
+              <div>
+                <p class="PocketRupee-grievance-card-level">Level 2</p>
+                <h3>Central Helpdesk</h3>
+              </div>
+            </div>
+            <p class="PocketRupee-grievance-card-desc">Escalation if Level 1 didn't resolve your issue</p>
+            <div class="PocketRupee-grievance-card-info">
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:operation@pocketrupee.in">operation@pocketrupee.in</a>
+              </div>
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-clock"></i>
+                <span>Monday to Friday, 9:30 AM – 6:30 PM</span>
+              </div>
+            </div>
+            <span class="PocketRupee-grievance-badge"><i class="fas fa-check-circle"></i> Response within 3 working
+              days</span>
           </div>
-          <div class="PocketRupee-contact-card PocketRupee-reveal">
-            <div class="PocketRupee-contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h3>Address</h3>
-            <p class="PocketRupee-contact-card-text">Shop No.270, Sahara Shopping Centre, Lekhraj Market, Faizabad Road, Lucknow, Uttar Pradesh, India, 2260162</p>
+
+          <!-- Level 3 -->
+          <div class="PocketRupee-grievance-card">
+            <div class="PocketRupee-grievance-card-header">
+              <div class="PocketRupee-grievance-card-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div>
+                <p class="PocketRupee-grievance-card-level">Level 3</p>
+                <h3>Grievance Redressal Officer</h3>
+              </div>
+            </div>
+            <p class="PocketRupee-grievance-card-desc">Nodal officer for unresolved complaints</p>
+            <div class="PocketRupee-grievance-card-info">
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:operation@pocketrupee.in">operation@pocketrupee.in</a>
+              </div>
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-clock"></i>
+                <span>Monday to Friday, 9:30 AM – 6:30 PM</span>
+              </div>
+              <div class="PocketRupee-grievance-card-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Shop No.270, Sahara Shopping Centre, Lekhraj Market, Faizabad Road, Lucknow, Uttar Pradesh –
+                  226016</span>
+              </div>
+            </div>
+            <span class="PocketRupee-grievance-badge"><i class="fas fa-check-circle"></i> Response within 5 working
+              days</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- How to File -->
+    <div class="PocketRupee-grievance-how">
+      <div class="PocketRupee-container">
+        <div class="PocketRupee-reveal">
+          <div class="PocketRupee-grievance-how-title">
+            <!-- <i class="fas fa-file-alt"></i> -->
+            <h1>How to File a Complaint</h1>
+          </div>
+          <p class="PocketRupee-grievance-how-desc">To help us resolve your complaint faster, please have the following
+            ready when you reach out:</p>
+          <div class="PocketRupee-grievance-how-grid">
+            <div class="PocketRupee-grievance-how-col">
+              <h4>Required Information</h4>
+              <ul>
+                <li>Full name as registered on your account</li>
+                <li>Registered mobile number</li>
+                <li>Loan ID or application number (if applicable)</li>
+                <li>Complete address and email ID</li>
+                <li>Clear description of the issue</li>
+                <li>Supporting documents (if any)</li>
+              </ul>
+            </div>
+            <div class="PocketRupee-grievance-how-col">
+              <h4>Contact Channels</h4>
+              <ul>
+                <li>Email: written complaints reviewed during business hours</li>
+                <li>Postal mail: for formal written submissions</li>
+                <li>In-person: visit our office during working hours</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="PocketRupee-contact-map-wrap">
+    <!-- Immediate Assistance -->
+    <div class="PocketRupee-grievance-assist">
       <div class="PocketRupee-container">
-        <div class="PocketRupee-contact-map-inner PocketRupee-reveal">
-          <img src="img/contact-map.png" alt="PocketRupee office location" id="contact-map">
+        <div class="PocketRupee-reveal">
+          <h1>Need Immediate Assistance?</h1>
+          <p>Our support team is available during business hours to help with any questions.</p>
+          <div class="PocketRupee-grievance-assist-grid">
+            <div class="PocketRupee-grievance-assist-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email Us</h3>
+              <p><a href="mailto:operation@pocketrupee.in">operation@pocketrupee.in</a></p>
+            </div>
+            <div class="PocketRupee-grievance-assist-card">
+              <i class="fas fa-clock"></i>
+              <h3>Support Hours</h3>
+              <p>Monday – Friday, 9:30 AM – 6:30 PM</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
+
+    <!-- Important Notice -->
+    <div class="PocketRupee-grievance-notice">
+      <div class="PocketRupee-container">
+        <div class="PocketRupee-grievance-notice-inner PocketRupee-reveal">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <h4>Important Notice</h4>
+            <p>All complaints will be acknowledged and worked on within 30 days from the date of receipt, subject to
+              complete information being provided. We aim to resolve every case as quickly as possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="PocketRupee-footer">
       <div class="PocketRupee-container">
         <div class="PocketRupee-footer-inner">
-
-          <!-- Row 1: Logo -->
           <div class="PocketRupee-footer-top">
             <div class="PocketRupee-footer-brand">
               <img src="img/logo-1.png" alt="PocketRupee" width="60">
@@ -98,9 +556,7 @@
               </div>
             </div>
           </div>
-
           <div class="PocketRupee-footer-content">
-            <!-- Left -->
             <div>
               <p class="PocketRupee-footer-description">
                 PocketRupee Application (owned by Phrenological info Audit and App Solution Private Limited) is a
@@ -114,8 +570,6 @@
                 <p>Copyright &copy;2026.</p>
               </div>
             </div>
-
-            <!-- Middle -->
             <div>
               <p class="PocketRupee-footer-col-title">Navigation</p>
               <div class="PocketRupee-footer-links-grid">
@@ -125,21 +579,17 @@
                   <a href="partner.html">Partner</a>
                   <a href="compliance.html">Compliance</a>
                 </div>
-
                 <div class="PocketRupee-footer-links">
                   <a href="how-to-apply.html">How to Apply</a>
-                  <a href="contact.html">Contact</a>
+                  <a href="contact.html">Grievance</a>
                   <a href="privacy-policy.html">Privacy Policy</a>
                   <a href="tnc.html">Terms & Conditions</a>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
-      <!-- Important Disclaimer -->
       <div class="PocketRupee-footer-disclaimer">
         <div class="PocketRupee-container">
           <p><strong>Important Disclaimer:</strong> Kanak Loans owned by B R Silver. All loans are provided by our
@@ -147,7 +597,6 @@
           </p>
         </div>
       </div>
-
     </footer>
   </main>
 
